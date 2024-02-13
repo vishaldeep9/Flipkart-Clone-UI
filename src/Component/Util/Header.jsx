@@ -1,0 +1,43 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import logo from "../../logo.png"
+
+const Header = () => {
+  return (
+    <header className="head bg-blue-900 flex justify-evenly h-16 w-full">
+    <div className="flex justify-around h-full items-center ">
+      {/* LOGO */}
+      <Link to={"/home"} className="pr-20 h-8 ">
+        <img src={logo} alt="" className=" w-35 h-full" />
+      </Link>
+      {/* SEARCH BAR */}
+      <div className="bg-blue-50 h-9 pr-18 rounded-s-lg">
+        <input
+          type="text"
+          placeholder="Search for products, categories etc..."
+          className=" min-w-96 pl-8 pr-8 h-full rounded-sm bg-blue-50"
+        ></input>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div className="flex justify-evenly items-center h-full w-4/12 ">
+      <Link to={"/login"}>
+        <button className="h-10 w-28 bg-white text-blue-700 font-bold">
+          Login
+        </button>
+      </Link>
+      <Link to={"/seller"} className="text-white">
+        Become a Seller
+      </Link>
+      <Link to={"/customer"} className="text-white">
+        New Customer? SignUp
+      </Link>
+      <Link to={"/cart"} className="text-white">
+        Cart
+      </Link>
+    </div>
+  </header>
+  )
+}
+
+export default Header
