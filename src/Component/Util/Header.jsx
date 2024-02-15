@@ -8,7 +8,7 @@ const Header = () => {
       {/* strarting to search bar */}
     <div className="flex justify-around h-full items-center ">
       {/* LOGO */}
-      <Link to={"/home"} className="pr-20 h-8 ">
+      <Link to="/" className="pr-20 h-8 ">
         <img src={logo} alt="" className=" w-35 h-full" />
       </Link>
       {/* SEARCH BAR */}
@@ -18,23 +18,23 @@ const Header = () => {
           placeholder="Search for products, categories etc..."
           className=" min-w-96 pl-8 pr-4 h-full rounded-sm bg-blue-50"
         >  </input>
-        <i class="fa-solid fa-magnifying-glass " ></i>
+        {/* <i class="fa-solid fa-magnifying-glass " ></i> */}
       </div>
     </div>
     {/* after serach bar */}
     <div className="flex justify-evenly items-center h-full w-4/12 ">
-      <Link to={"/login"}>
+      <Link to={"/"}>
         <button className="h-8 w-28 bg-white text-blue-700 font-bold">
           Login
         </button>
       </Link>
-      <Link to={"/seller"} className="text-white">
+      <Link to={"/"} className="text-white">
         Become a Seller
       </Link>
-      <Link to={"/customer"} className="text-white">
+      <Link to={"/"} className="text-white">
         New Customer? SignUp
       </Link>
-      <Link to={"/cart"} className="text-white">
+      <Link to={"/"} className="text-white">
         Cart
       </Link>
     </div>
